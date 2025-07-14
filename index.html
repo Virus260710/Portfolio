@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 style="display:none;">Portfolio Panyapipat</h1>
+  </header>
+  <nav class="navbar">
+    <ul>
+      <li class="active"><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT ME</a></li>
+      <li><a href="project.html">PROJECTS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <main class="main-flex">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="profile-container">
+            <img src="profile.jpg" alt="Profile" class="hero-profile-img">
+            <div class="profile-badge">
+              <span class="badge-text">Available for opportunities</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-text">
+            <span class="wave">👋</span>
+            <h1 class="hero-title">Hi, I'm <span class="highlight-name">Panyapipat Khamkhaw</span></h1>
+            <h2 class="hero-subtitle">Cybersecurity Student & Aspiring Security Professional</h2>
+            <p class="hero-description">
+              I'm passionate about cybersecurity and love learning new technologies. 
+              Currently studying at Bangkok University, I focus on vulnerability assessment, 
+              penetration testing, and security analysis.
+            </p>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">21</span>
+                <span class="stat-label">Years Old</span>
+              </div>
+            </div>
+            <div class="hero-buttons">
+              <a href="project.html" class="btn-primary">
+                <span>View Projects</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="contact.html" class="btn-secondary">Get In Touch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Certifications Section -->
+    <section class="skills-section">
+      <div class="section-header">
+        <h2>Skills & Certifications</h2>
+        <p>My expertise and achievements in cybersecurity</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🔒</div>
+          <h3>Penetration Testing</h3>
+          <p>Vulnerability scanning, exploitation, and post-exploitation techniques</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🌐</div>
+          <h3>Web Security</h3>
+          <p>SQL injection, XSS, CSRF, and web application security assessment</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🛠️</div>
+          <h3>Security Tools</h3>
+          <p>Nmap, Burp Suite, Metasploit, Gobuster, and various security frameworks</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificate Section -->
+    <section class="certificate-section">
+      <div class="certificate-card">
+        <div class="certificate-header">
+          <h3>Latest Achievement</h3>
+          <span class="certificate-badge">Coursera</span>
+        </div>
+        <img src="รูป/Coursera.jpg" alt="Coursera Certificate" class="certificate-img">
+        <div class="certificate-info">
+          <h4>Cybersecurity Specialization</h4>
+          <p>Completed comprehensive cybersecurity course covering network security, cryptography, and ethical hacking</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Portfolio by Panyapipat Khamkhaw</p>
+  </footer>
+</body>
+</html>

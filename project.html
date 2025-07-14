@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project | Movie Ticket Booking</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .slider-container {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+      background: #000;
+    }
+    .slider-img {
+      width: 100%;
+      display: none;
+      border-radius: 1rem;
+      object-fit: contain;
+      background: #000;
+      max-height: 340px;
+    }
+    .slider-img.active {
+      display: block;
+    }
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(25,118,210,0.8);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 2;
+      transition: background 0.2s;
+    }
+    .slider-btn:hover {
+      background: #1976d2;
+    }
+    .slider-btn.prev { left: 10px; }
+    .slider-btn.next { right: 10px; }
+    .slider-dots {
+      text-align: center;
+      margin-top: 0.7rem;
+    }
+    .slider-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 0 4px;
+      background: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .slider-dot.active {
+      background: #1976d2;
+    }
+  </style>
+</head>
+<body>
+  <header><h1 style="display:none;">Portfolio Panyapipat</h1></header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT ME</a></li>
+      <li class="active"><a href="project.html">PROJECTS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <main class="project-main">
+    <h1>Movie Ticket Booking Application</h1>
+    <div class="slider-container">
+      <button class="slider-btn prev">&#8592;</button>
+      <img src="รูป/loginpage.png" class="slider-img active" alt="login">
+      <img src="รูป/registerpage.png" class="slider-img" alt="register">
+      <img src="รูป/mainpagemovie.png" class="slider-img" alt="main page">
+      <img src="รูป/choice.png" class="slider-img" alt="choice">
+      <img src="รูป/pick.png" class="slider-img" alt="pick">
+      <button class="slider-btn next">&#8594;</button>
+    </div>
+    <div class="slider-dots">
+      <span class="slider-dot active"></span>
+      <span class="slider-dot"></span>
+      <span class="slider-dot"></span>
+      <span class="slider-dot"></span>
+      <span class="slider-dot"></span>
+    </div>
+    <p class="project-desc">
+      Example project: <b>Movie Ticket Booking Application</b><br>
+      Designed an easy-to-use app for booking movie tickets. Users can select cinema, showtime, and seats in real time.
+    </p>
+    <a href="https://www.figma.com/proto/MR9kEqSn4ocfDHXzFn0zCH/Project?node-id=1-62&starting-point-node-id=1%3A2&t=behOuoXKd68EzCez-1" target="_blank" class="figma-link">View Figma</a>
+    <section class="internship-section">
+      <h2>Internship Experience</h2>
+      <div class="internship-slider-container">
+        <button class="internship-slider-btn prev">&#8592;</button>
+        <img src="รูป/ฝึกงาน1.jpg" class="internship-slider-img active" alt="Internship 1">
+        <img src="รูป/ฝึกงาน2.jpg" class="internship-slider-img" alt="Internship 2">
+        <button class="internship-slider-btn next">&#8594;</button>
+      </div>
+      <div class="internship-slider-dots">
+        <span class="internship-slider-dot active"></span>
+        <span class="internship-slider-dot"></span>
+      </div>
+      <p class="internship-desc">Internship: I had an internship experience in programming Arduino boards for learning and experimentation.</p>
+    </section>
+        <section class="calorie-section">
+      <h2>calorie Experience</h2>
+      <div class="calorie-slider-container">
+        <button class="calorie-slider-btn prev">&#8592;</button>
+        <img src="รูป/calorie1.png" class="calorie-slider-img active" alt="calorie 1">
+        <img src="รูป/calorie2.png" class="calorie-slider-img" alt="calorie 2">
+        <img src="รูป/calorie3.png" class="calorie-slider-img" alt="calorie 3">
+        <img src="รูป/calorie4.png" class="calorie-slider-img" alt="calorie 4">
+        <img src="รูป/calorie5.png" class="calorie-slider-img" alt="calorie 5">
+        <img src="รูป/calorie6.png" class="calorie-slider-img" alt="calorie 6">
+        <img src="รูป/calorie7.png" class="calorie-slider-img" alt="calorie 7">
+        <button class="calorie-slider-btn next">&#8594;</button>
+      </div>
+      <div class="calorie-slider-dots">
+        <span class="calorie-slider-dot active"></span>
+        <span class="calorie-slider-dot"></span>
+        <span class="calorie-slider-dot"></span>
+        <span class="calorie-slider-dot"></span>
+        <span class="calorie-slider-dot"></span>
+        <span class="calorie-slider-dot"></span>
+        <span class="calorie-slider-dot"></span>
+      </div>
+      <p class="calorie-desc">Project: Designed and developed a fitness tracking application that helps users monitor their daily calorie intake, plan workouts, and track their fitness progress. The app features a user-friendly interface for logging meals, calculating calories burned, and setting personalized fitness goals.</p>
+      <div style="text-align: center;">
+        <a href="https://www.figma.com/proto/GyAxXAVv4azXAbQ7jhzDgo/Untitled?node-id=22-8&starting-point-node-id=22%3A8&t=VnWICWpmMz1UjwEx-1" target="_blank" class="figma-link">View Figma</a>
+      </div>
+    </section>
+    <section class="tryhackme-section">
+      <h2>TryHackMe Labs</h2>
+      <img src="รูป/Tryhackme.png" alt="TryHackMe" class="tryhackme-img">
+      <div class="tryhackme-labs">
+        <div class="tryhackme-lab">
+          <p>
+            - Scanned for vulnerabilities using Nmap, Gobuster, and Burp Suite<br>
+            - Analyzed web vulnerabilities with DVWA<br>
+            - Practiced system exploitation and post-exploitation<br>
+            - Used Metasploit to exploit Windows systems<br>
+            - Attacked web applications using SQLi, XSS, and Command Injection techniques
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const imgs = document.querySelectorAll('.slider-img');
+    const dots = document.querySelectorAll('.slider-dot');
+    const prevBtn = document.querySelector('.slider-btn.prev');
+    const nextBtn = document.querySelector('.slider-btn.next');
+    let current = 0;
+    let isAnimating = false;
+
+    function showSlide(idx) {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      // Remove active class from current slide
+      imgs[current].classList.remove('active');
+      dots[current].classList.remove('active');
+
+      // Update current index
+      current = idx;
+
+      // Add active class to new slide
+      imgs[current].style.display = 'block';
+      setTimeout(() => {
+        imgs[current].classList.add('active');
+        dots[current].classList.add('active');
+        
+        // Reset animation lock after transition completes
+        setTimeout(() => {
+          isAnimating = false;
+          // Hide previous slides
+          imgs.forEach((img, i) => {
+            if (i !== current) img.style.display = 'none';
+          });
+        }, 400);
+      }, 50);
+    }
+
+    prevBtn.onclick = () => showSlide((current - 1 + imgs.length) % imgs.length);
+    nextBtn.onclick = () => showSlide((current + 1) % imgs.length);
+    dots.forEach((dot, i) => dot.onclick = () => showSlide(i));
+
+    // Auto-play functionality
+    let autoplayInterval;
+    const startAutoplay = () => {
+      autoplayInterval = setInterval(() => {
+        showSlide((current + 1) % imgs.length);
+      }, 5000);
+    };
+    const stopAutoplay = () => {
+      clearInterval(autoplayInterval);
+    };
+
+    // Start autoplay and handle hover pause
+    startAutoplay();
+    const sliderContainer = document.querySelector('.slider-container');
+    sliderContainer.addEventListener('mouseenter', stopAutoplay);
+    sliderContainer.addEventListener('mouseleave', startAutoplay);
+
+    // Internship slider
+    const iImgs = document.querySelectorAll('.internship-slider-img');
+    const iDots = document.querySelectorAll('.internship-slider-dot');
+    const iPrevBtn = document.querySelector('.internship-slider-btn.prev');
+    const iNextBtn = document.querySelector('.internship-slider-btn.next');
+    let iCurrent = 0;
+    let iIsAnimating = false;
+
+    function showISlide(idx) {
+      if (iIsAnimating) return;
+      iIsAnimating = true;
+
+      // Remove active class from current slide
+      iImgs[iCurrent].classList.remove('active');
+      iDots[iCurrent].classList.remove('active');
+
+      // Update current index
+      iCurrent = idx;
+
+      // Add active class to new slide
+      iImgs[iCurrent].style.display = 'block';
+      setTimeout(() => {
+        iImgs[iCurrent].classList.add('active');
+        iDots[iCurrent].classList.add('active');
+        
+        // Reset animation lock after transition completes
+        setTimeout(() => {
+          iIsAnimating = false;
+          // Hide previous slides
+          iImgs.forEach((img, i) => {
+            if (i !== iCurrent) img.style.display = 'none';
+          });
+        }, 400);
+      }, 50);
+    }
+
+    if(iPrevBtn && iNextBtn) {
+      iPrevBtn.onclick = () => showISlide((iCurrent - 1 + iImgs.length) % iImgs.length);
+      iNextBtn.onclick = () => showISlide((iCurrent + 1) % iImgs.length);
+      iDots.forEach((dot, i) => dot.onclick = () => showISlide(i));
+
+      // Auto-play functionality for internship slider
+      let iAutoplayInterval;
+      const startIAutoplay = () => {
+        iAutoplayInterval = setInterval(() => {
+          showISlide((iCurrent + 1) % iImgs.length);
+        }, 6000);
+      };
+      const stopIAutoplay = () => {
+        clearInterval(iAutoplayInterval);
+      };
+
+      // Start autoplay and handle hover pause
+      startIAutoplay();
+      const internshipSliderContainer = document.querySelector('.internship-slider-container');
+      internshipSliderContainer.addEventListener('mouseenter', stopIAutoplay);
+      internshipSliderContainer.addEventListener('mouseleave', startIAutoplay);
+    }
+
+    // Calorie slider
+    const cImgs = document.querySelectorAll('.calorie-slider-img');
+    const cDots = document.querySelectorAll('.calorie-slider-dot');
+    const cPrevBtn = document.querySelector('.calorie-slider-btn.prev');
+    const cNextBtn = document.querySelector('.calorie-slider-btn.next');
+    let cCurrent = 0;
+    let cIsAnimating = false;
+
+    function showCSlide(idx) {
+      if (cIsAnimating) return;
+      cIsAnimating = true;
+
+      // Remove active class from current slide
+      cImgs[cCurrent].classList.remove('active');
+      cDots[cCurrent].classList.remove('active');
+
+      // Update current index
+      cCurrent = idx;
+
+      // Add active class to new slide
+      cImgs[cCurrent].style.display = 'block';
+      setTimeout(() => {
+        cImgs[cCurrent].classList.add('active');
+        cDots[cCurrent].classList.add('active');
+        
+        // Reset animation lock after transition completes
+        setTimeout(() => {
+          cIsAnimating = false;
+          // Hide previous slides
+          cImgs.forEach((img, i) => {
+            if (i !== cCurrent) img.style.display = 'none';
+          });
+        }, 400);
+      }, 50);
+    }
+
+    // Fix initial state - only first image should be active
+    cImgs.forEach((img, i) => {
+      if (i !== 0) {
+        img.classList.remove('active');
+      }
+    });
+
+    cPrevBtn.onclick = () => showCSlide((cCurrent - 1 + cImgs.length) % cImgs.length);
+    cNextBtn.onclick = () => showCSlide((cCurrent + 1) % cImgs.length);
+    cDots.forEach((dot, i) => dot.onclick = () => showCSlide(i));
+
+    // Auto-play functionality for calorie slider
+    let cAutoplayInterval;
+    const startCAutoplay = () => {
+      cAutoplayInterval = setInterval(() => {
+        showCSlide((cCurrent + 1) % cImgs.length);
+      }, 5500);
+    };
+    const stopCAutoplay = () => {
+      clearInterval(cAutoplayInterval);
+    };
+
+    // Start autoplay and handle hover pause
+    startCAutoplay();
+    const calorieSliderContainer = document.querySelector('.calorie-slider-container');
+    calorieSliderContainer.addEventListener('mouseenter', stopCAutoplay);
+    calorieSliderContainer.addEventListener('mouseleave', startCAutoplay);
+  </script>
+</body>
+</html>
