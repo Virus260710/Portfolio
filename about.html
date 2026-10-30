@@ -4,81 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Panyapipat Khamkhaw</title>
-  <meta name="description" content="About Panyapipat 'Fight' Khamkhaw — cybersecurity student and aspiring security engineer." />
+  <meta name="description" content="About Panyapipat 'Fight' Khamkhaw — cybersecurity student at Rajamangala University of Technology Lanna." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar" id="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="brand"><span class="prompt">fight@sec</span>:~$<span class="caret"></span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">≡</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">./home</a></li>
-        <li><a href="about.html" class="active">./about</a></li>
-        <li><a href="project.html">./projects</a></li>
-        <li><a href="contact.html">./contact</a></li>
-      </ul>
+  <header class="topbar" id="top">
+    <div class="topbar-inner">
+      <a href="index.html" class="wordmark"><b>P.</b> Khamkhaw</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">menu</button>
+      <nav class="nav" id="nav">
+        <a href="index.html">Index</a>
+        <a href="project.html">Work</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <main>
-    <section style="padding-top:140px;">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">// about me</span>
-          <h2>Get to know <span class="gradient-text">Fight</span></h2>
-          <p>The person behind the payloads.</p>
+  <section style="padding-top:clamp(90px,14vh,150px);">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">—</span>
+        <h2>About</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="portrait reveal">
+          <img src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/about.jpg" alt="Panyapipat Khamkhaw" />
+          <div class="cap"><span>Panyapipat K.</span><span>Chiang Mai</span></div>
         </div>
 
-        <div class="about-grid">
-          <!-- Profile card -->
-          <aside class="about-card reveal">
-            <img src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/about.jpg" alt="Panyapipat Khamkhaw" class="ava" />
-            <h3>Panyapipat Khamkhaw</h3>
-            <div class="handle">@fight</div>
-            <div class="status"><span class="d"></span> Open to internships</div>
-          </aside>
-
-          <!-- Details -->
-          <div>
-            <div class="about-intro reveal d1">
-              <p>
-                I'm a 21-year-old cybersecurity student who's happiest when I'm pulling a system
-                apart to understand how it really works — then putting it back together more securely.
-                My interests run across penetration testing, web application security, and building
-                full-stack apps with security baked in from day one, like my Kinof room-booking platform.
-              </p>
-            </div>
-
-            <div class="card reveal d2">
-              <div class="info-list">
-                <div class="info-row"><div class="k">👤 Name</div><div class="v">Panyapipat Khamkhaw</div></div>
-                <div class="info-row"><div class="k">🏷️ Nickname</div><div class="v">Fight</div></div>
-                <div class="info-row"><div class="k">🎂 Date of birth</div><div class="v">29 April 2004</div></div>
-                <div class="info-row"><div class="k">⏳ Age</div><div class="v">21 years old</div></div>
-                <div class="info-row"><div class="k">✉️ Email</div><div class="v">panyapipatkhamkhaw@gmail.com</div></div>
-                <div class="info-row"><div class="k">📱 Phone</div><div class="v">093-276-3191</div></div>
-                <div class="info-row"><div class="k">🎓 Education</div><div class="v">Rajamangala University of Technology Lanna</div></div>
-                <div class="info-row"><div class="k">🔎 Highlight</div><div class="v">Vulnerability scanning with Nmap, Gobuster &amp; Burp Suite; web attacks with DVWA</div></div>
-              </div>
-            </div>
-
-            <div style="display:flex;gap:14px;margin-top:28px;flex-wrap:wrap;" class="reveal d3">
-              <a href="project.html" class="btn btn-primary">See my work →</a>
-              <a href="contact.html" class="btn btn-ghost">Contact me</a>
-            </div>
-          </div>
+        <div class="prose reveal d1">
+          <p><span class="lead-in">I'm a 21-year-old cybersecurity student</span>, happiest when I'm pulling a system apart to see how it actually works — then putting it back together so the next person can't.</p>
+          <p>My work runs across penetration testing, web application security, and full-stack development. The thread through all of it is building with security in from the start rather than bolted on at the end, which is how Kinof ended up with a face engine the client can never reach and booking tokens that only ever exist as hashes on the server.</p>
+          <p>On the offensive side I practise recon, exploitation, and web attacks on TryHackMe and DVWA — Nmap, Gobuster, Metasploit, and Burp Suite are what I reach for most. I'm looking for an internship where I can do this on real systems.</p>
         </div>
       </div>
-    </section>
-  </main>
+
+      <div style="margin-top:clamp(50px,8vh,90px);" class="reveal d2">
+        <div class="facts">
+          <div class="row"><div class="k">Name</div><div class="v">Panyapipat Khamkhaw ("Fight")</div></div>
+          <div class="row"><div class="k">Born</div><div class="v">29 April 2004 · 21</div></div>
+          <div class="row"><div class="k">Education</div><div class="v">Rajamangala University of Technology Lanna</div></div>
+          <div class="row"><div class="k">Focus</div><div class="v">Web application security · penetration testing</div></div>
+          <div class="row"><div class="k">Tooling</div><div class="v">Nmap · Gobuster · Metasploit · Burp Suite · DVWA</div></div>
+          <div class="row"><div class="k">Email</div><div class="v">panyapipatkhamkhaw@gmail.com</div></div>
+          <div class="row"><div class="k">Phone</div><div class="v">093-276-3191</div></div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;margin-top:38px;flex-wrap:wrap;" class="reveal d3">
+        <a href="project.html" class="btn btn-solid">See the work →</a>
+        <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <a href="index.html" class="brand"><span class="prompt">fight@sec</span>:~$</a>
-      <p>© 2025 Panyapipat Khamkhaw · Built with ☕ &amp; curiosity</p>
+    <div class="wrap footer-inner">
+      <a href="index.html" class="wordmark"><b>P.</b> Khamkhaw</a>
+      <p>© 2026 Panyapipat Khamkhaw — Chiang Mai, TH</p>
+      <div class="links">
+        <a href="contact.html">Email</a>
+        <a href="project.html">Work</a>
+        <a href="#top">Top ↑</a>
+      </div>
     </div>
   </footer>
 
