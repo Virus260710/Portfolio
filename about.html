@@ -1,38 +1,87 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Panyapipat Khamkhaw</title>
+  <meta name="description" content="About Panyapipat 'Fight' Khamkhaw — cybersecurity student and aspiring security engineer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header><h1 style="display:none;">about-me</h1></header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li class="active"><a href="about.html">ABOUT ME</a></li>
-        <li><a href="project.html">PROJECTS</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
+  <nav class="navbar" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><span class="prompt">fight@sec</span>:~$<span class="caret"></span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">≡</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">./home</a></li>
+        <li><a href="about.html" class="active">./about</a></li>
+        <li><a href="project.html">./projects</a></li>
+        <li><a href="contact.html">./contact</a></li>
       </ul>
-    </nav>
-    <section class="about-hero">
-    </section>
-    <main class="about-main">
-        <img src="รูป/about.jpg" alt="About Me" class="about-profile-img">
-        <h1 class="about-title">About Me</h1>
-        <div class="about-card">
-            <div class="about-info">
-                <p><b>Name:</b> Panyapipat Khamkhaw <span class="about-nickname"></span></p>
-                <p><b>Nickname:</b> Fight</p>
-                <p><b>Date of Birth:</b> 29 April 2004</p>
-                <p><b>Age:</b> 21 years old</p>
-                <p><b>Email:</b> panyapipatkhamkhaw@gmail.com</p>
-                <p><b>Phone:</b> 093-276-3191</p>
-                <p><b>Education:</b> Graduated from Rajamangala University of Technology Lanna<br>&nbsp;&nbsp;&nbsp;&nbsp;- Faculty of Pre-Engineering (Gifted)<br>Currently studying at Bangkok University<br>&nbsp;&nbsp;&nbsp;&nbsp;- Faculty of Cybersecurity, 3rd Year (GPA: 2.17)</p>
-                <p><b>Highlight Project:</b> Scanned for vulnerabilities using Nmap, Gobuster, and Burp Suite. Analyzed web vulnerabilities with DVWA. Practiced system exploitation and post-exploitation. Used Metasploit to exploit Windows systems. Attacked web applications using SQLi, XSS, and Command Injection techniques.</p>
-            </div>
+    </div>
+  </nav>
+
+  <main>
+    <section style="padding-top:140px;">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">// about me</span>
+          <h2>Get to know <span class="gradient-text">Fight</span></h2>
+          <p>The person behind the payloads.</p>
         </div>
-    </main>
+
+        <div class="about-grid">
+          <!-- Profile card -->
+          <aside class="about-card reveal">
+            <img src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/about.jpg" alt="Panyapipat Khamkhaw" class="ava" />
+            <h3>Panyapipat Khamkhaw</h3>
+            <div class="handle">@fight</div>
+            <div class="status"><span class="d"></span> Open to internships</div>
+          </aside>
+
+          <!-- Details -->
+          <div>
+            <div class="about-intro reveal d1">
+              <p>
+                I'm a 21-year-old cybersecurity student who's happiest when I'm pulling a system
+                apart to understand how it really works — then putting it back together more securely.
+                My interests run across penetration testing, web application security, and building
+                full-stack apps with security baked in from day one, like my Kinof room-booking platform.
+              </p>
+            </div>
+
+            <div class="card reveal d2">
+              <div class="info-list">
+                <div class="info-row"><div class="k">👤 Name</div><div class="v">Panyapipat Khamkhaw</div></div>
+                <div class="info-row"><div class="k">🏷️ Nickname</div><div class="v">Fight</div></div>
+                <div class="info-row"><div class="k">🎂 Date of birth</div><div class="v">29 April 2004</div></div>
+                <div class="info-row"><div class="k">⏳ Age</div><div class="v">21 years old</div></div>
+                <div class="info-row"><div class="k">✉️ Email</div><div class="v">panyapipatkhamkhaw@gmail.com</div></div>
+                <div class="info-row"><div class="k">📱 Phone</div><div class="v">093-276-3191</div></div>
+                <div class="info-row"><div class="k">🎓 Education</div><div class="v">Rajamangala University of Technology Lanna</div></div>
+                <div class="info-row"><div class="k">🔎 Highlight</div><div class="v">Vulnerability scanning with Nmap, Gobuster &amp; Burp Suite; web attacks with DVWA</div></div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:14px;margin-top:28px;flex-wrap:wrap;" class="reveal d3">
+              <a href="project.html" class="btn btn-primary">See my work →</a>
+              <a href="contact.html" class="btn btn-ghost">Contact me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="brand"><span class="prompt">fight@sec</span>:~$</a>
+      <p>© 2025 Panyapipat Khamkhaw · Built with ☕ &amp; curiosity</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
