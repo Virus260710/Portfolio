@@ -3,177 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Panyapipat Khamkhaw — Cybersecurity Portfolio</title>
-  <meta name="description" content="Panyapipat 'Fight' Khamkhaw — Cybersecurity student focused on penetration testing, web security, and full-stack security engineering." />
+  <title>Panyapipat Khamkhaw — Security &amp; Full-Stack</title>
+  <meta name="description" content="Panyapipat 'Fight' Khamkhaw — cybersecurity student. Web application security, penetration testing, and full-stack builds with security designed in." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- NAV -->
-  <nav class="navbar" id="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="brand"><span class="prompt">fight@sec</span>:~$<span class="caret"></span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">≡</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="active">./home</a></li>
-        <li><a href="about.html">./about</a></li>
-        <li><a href="project.html">./projects</a></li>
-        <li><a href="contact.html">./contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container hero-grid">
-      <div class="hero-left">
-        <span class="eyebrow reveal">Available for internships &amp; collaboration</span>
-        <h1 class="reveal d1">
-          <span class="name">Panyapipat</span>
-          <span class="name gradient-text">Khamkhaw</span>
-        </h1>
-        <p class="role reveal d1">Cybersecurity Student <span class="blink">&amp;</span> Aspiring Security Engineer</p>
-        <p class="lead reveal d2">
-          21-year-old security enthusiast breaking and building systems. I focus on
-          vulnerability assessment, penetration testing, and shipping secure full-stack
-          applications — from recon to remediation.
-        </p>
-        <div class="hero-cta reveal d2">
-          <a href="project.html" class="btn btn-primary">View Projects →</a>
-          <a href="contact.html" class="btn btn-ghost">Get in touch</a>
-        </div>
-        <div class="hero-stats reveal d3">
-          <div class="stat"><div class="num"><span>21</span></div><div class="label">Years old</div></div>
-          <div class="stat"><div class="num"><span>5</span>+</div><div class="label">Projects</div></div>
-          <div class="stat"><div class="num"><span>∞</span></div><div class="label">Payloads tried</div></div>
-        </div>
-      </div>
-
-      <div class="hero-right reveal d2">
-        <div class="terminal">
-          <div class="term-bar">
-            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-            <span class="title">whoami.sh</span>
-          </div>
-          <div class="term-body">
-            <img src="profile.jpg" alt="Panyapipat Khamkhaw" class="term-avatar" />
-            <div class="line"><span class="cmd">$ whoami</span></div>
-            <div class="line"><span class="out">panyapipat "fight" khamkhaw</span></div>
-            <div class="line"><span class="cmd">$ cat role.txt</span></div>
-            <div class="line"><span class="out">cybersecurity_student</span></div>
-            <div class="line"><span class="cmd">$ ls ./skills</span></div>
-            <div class="line"><span class="out"><span class="k">pentest</span> <span class="s">web-sec</span> <span class="k">recon</span> <span class="s">dev</span></span></div>
-            <div class="line"><span class="cmd">$ status</span> <span class="out">🟢 online</span></div>
-          </div>
-        </div>
-      </div>
+  <!-- TOP BAR -->
+  <header class="topbar" id="top">
+    <div class="topbar-inner">
+      <a href="index.html" class="wordmark"><b>P.</b> Khamkhaw</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">menu</button>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="active">Index</a>
+        <a href="project.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">// capabilities</span>
-        <h2>Skills &amp; <span class="gradient-text">Certifications</span></h2>
-        <p>My expertise and achievements across offensive security and development.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-lead">
+        <span class="tag">Cybersecurity · Full-Stack</span>
+        <h1 class="reveal">Panyapipat<br />Khamkhaw<span class="give">.</span></h1>
+        <p class="hero-sub">I break systems to understand them, then build them back more carefully. Web security, penetration testing, and full-stack work.</p>
       </div>
-      <div class="grid grid-3">
-        <div class="card reveal">
-          <div class="ico">🔓</div>
-          <h3>Penetration Testing</h3>
-          <p>Vulnerability scanning, exploitation, and post-exploitation techniques across web and systems.</p>
-          <div class="tags"><span class="chip accent">Metasploit</span><span class="chip">Privilege Esc</span><span class="chip">Post-Exploit</span></div>
-        </div>
-        <div class="card reveal d1">
-          <div class="ico">🌐</div>
-          <h3>Web Security</h3>
-          <p>SQL injection, XSS, CSRF, and end-to-end web application security assessment.</p>
-          <div class="tags"><span class="chip accent">SQLi</span><span class="chip">XSS</span><span class="chip">Burp Suite</span></div>
-        </div>
-        <div class="card reveal d2">
-          <div class="ico">🛠️</div>
-          <h3>Security Tooling</h3>
-          <p>Nmap, Burp Suite, Metasploit, Gobuster, and a growing toolbox of security frameworks.</p>
-          <div class="tags"><span class="chip accent">Nmap</span><span class="chip">Gobuster</span><span class="chip">DVWA</span></div>
-        </div>
+      <aside class="hero-side">
+        <p>Twenty-one, based in Chiang Mai. Studying at Rajamangala University of Technology Lanna. I spend most of my time on vulnerability assessment and shipping small systems that have to stay secure under real use.</p>
+        <span class="signoff">Open to internships</span>
+      </aside>
+    </div>
+
+    <div class="wrap">
+      <div class="meta-strip">
+        <div class="cell"><div class="k">Focus</div><div class="v">Web security</div></div>
+        <div class="cell"><div class="k">Toolbox</div><div class="v">Burp · Nmap · Metasploit</div></div>
+        <div class="cell"><div class="k">Building</div><div class="v">React · NestJS · FastAPI</div></div>
+        <div class="cell"><div class="k">Status</div><div class="v">Available 2026</div></div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED: KINOF -->
-  <section id="featured">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">// featured build</span>
-        <h2>Flagship Project — <span class="gradient-text">Kinof</span></h2>
-        <p>A security-first, full-stack platform for booking and managing computer rooms.</p>
+  <!-- SELECTED WORK -->
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">01</span>
+        <h2>Selected work</h2>
       </div>
 
-      <div class="featured reveal d1">
-        <div class="featured-info">
-          <span class="featured-badge">Full-Stack · Security · Face Recognition</span>
-          <h3>Kinof — Computer Room Booking &amp; Management System</h3>
-          <p>
-            An end-to-end platform where students book lab machines and admins monitor them in
-            real time. Built as a multi-service system with a hard security boundary: clients never
-            touch the database or face engine directly — everything is brokered by the backend.
-          </p>
-          <ul class="featured-list">
-            <li><b>Face-recognition check-in</b> via FastAPI + InsightFace — stores only 512-dim embeddings, never raw face images.</li>
-            <li><b>OTP booking flow</b> with single-use, expiring tokens kept as HMAC hashes server-side.</li>
-            <li><b>JWT auth &amp; roles</b> for user, admin, and Kiosk interfaces.</li>
-            <li><b>Windows tracking agents</b> reporting machine status &amp; running programs, each with its own hashed API key.</li>
-            <li><b>Browser extension</b> for domain-level tracking/blocking — logs domains only, no paths or content.</li>
+      <div class="work">
+        <!-- FLAGSHIP: KINOF -->
+        <article class="project reveal">
+          <div class="p-body">
+            <span class="p-num">01 — Flagship</span>
+            <h3>Kinof</h3>
+            <div class="p-kicker">Computer-room booking &amp; management</div>
+            <p>A multi-service platform where students book lab machines and admins watch them in real time. Clients never touch the database or the face engine directly — everything passes through the backend, which is the only trust boundary that matters.</p>
+            <ul class="p-points">
+              <li><b>Face check-in</b> on FastAPI + InsightFace. Stores 512-dim embeddings, never raw images.</li>
+              <li><b>OTP booking</b> with single-use, expiring tokens kept as HMAC hashes server-side.</li>
+              <li><b>Windows agents</b> report machine status and running programs, each with its own hashed API key.</li>
+            </ul>
+            <div class="p-stack">
+              <span>React</span><span>Vite</span><span>NestJS</span><span>FastAPI</span><span>InsightFace</span><span>MySQL</span>
+            </div>
+            <a href="project.html#kinof" class="p-link">Read the build →</a>
+          </div>
+          <div class="p-media">
+            <div class="frame" data-slider>
+              <div class="slider">
+                <img class="slide active" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/loginpage.png" alt="Kinof login" />
+                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/registerpage.png" alt="Kinof register" />
+                <button class="ctrl prev" aria-label="Previous">‹</button>
+                <button class="ctrl next" aria-label="Next">›</button>
+              </div>
+              <div class="dots"></div>
+            </div>
+            <div class="p-cap">Fig. 01 — Auth &amp; booking UI</div>
+          </div>
+        </article>
+
+        <!-- MOVIE -->
+        <article class="project flip reveal">
+          <div class="p-media">
+            <div class="frame" data-slider>
+              <div class="slider">
+                <img class="slide active" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/mainpagemovie.png" alt="Movie booking home" />
+                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/choice.png" alt="Seat choice" />
+                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/pick.png" alt="Seat pick" />
+                <button class="ctrl prev" aria-label="Previous">‹</button>
+                <button class="ctrl next" aria-label="Next">›</button>
+              </div>
+              <div class="dots"></div>
+            </div>
+            <div class="p-cap">Fig. 02 — Seat selection flow</div>
+          </div>
+          <div class="p-body">
+            <span class="p-num">02</span>
+            <h3>Movie Ticket Booking</h3>
+            <div class="p-kicker">Full-stack web application</div>
+            <p>Browse showings, pick seats off a live seat map, and check out. Seat state is held server-side so two people can't claim the same seat, and the booking view updates as seats go.</p>
+            <div class="p-stack"><span>Web app</span><span>Seat map</span><span>Booking flow</span></div>
+            <a href="project.html#movie" class="p-link">See more →</a>
+          </div>
+        </article>
+
+        <!-- CALORIE -->
+        <article class="project reveal">
+          <div class="p-body">
+            <span class="p-num">03</span>
+            <h3>Calorie &amp; Fitness Tracker</h3>
+            <div class="p-kicker">Logging &amp; daily targets</div>
+            <p>Log meals and workouts, and the app tracks intake against a daily target. Built to stay readable when the day's log gets long — the numbers are the point, so they lead.</p>
+            <div class="p-stack"><span>Tracking</span><span>Charts</span><span>Daily goals</span></div>
+            <a href="project.html#calorie" class="p-link">See more →</a>
+          </div>
+          <div class="p-media">
+            <div class="frame" data-slider>
+              <div class="slider">
+                <img class="slide active" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie1.png" alt="Calorie tracker 1" />
+                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie2.png" alt="Calorie tracker 2" />
+                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie3.png" alt="Calorie tracker 3" />
+                <button class="ctrl prev" aria-label="Previous">‹</button>
+                <button class="ctrl next" aria-label="Next">›</button>
+              </div>
+              <div class="dots"></div>
+            </div>
+            <div class="p-cap">Fig. 03 — Tracking dashboard</div>
+          </div>
+        </article>
+      </div>
+
+      <div style="margin-top:40px;" class="reveal">
+        <a href="project.html" class="btn btn-ghost">All projects →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH / STACK -->
+  <section id="stack">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">02</span>
+        <h2>What I work with</h2>
+        <span class="note">Offense · defense · build</span>
+      </div>
+
+      <div class="stack-grid reveal d1">
+        <div class="stack-col">
+          <div class="sub">Offensive</div>
+          <h4>Finding the way in</h4>
+          <ul>
+            <li>Vulnerability scanning <span>Nmap · Gobuster</span></li>
+            <li>Web attacks <span>SQLi · XSS</span></li>
+            <li>Exploitation <span>Metasploit</span></li>
+            <li>Practice labs <span>DVWA · TryHackMe</span></li>
           </ul>
-          <div class="featured-stack">
-            <span class="chip accent">React</span><span class="chip accent">Vite</span><span class="chip accent">Tailwind</span>
-            <span class="chip">NestJS</span><span class="chip">FastAPI</span><span class="chip">InsightFace</span><span class="chip">MySQL</span>
-          </div>
-          <a href="project.html#kinof" class="btn btn-primary">Explore the build →</a>
         </div>
-
-        <div class="arch">
-          <div class="arch-stack">
-            <div class="arch-node"><div class="t">🖥️ Frontend</div><div class="d">User · Admin · Kiosk web (React)</div><span class="tag">HTTP</span></div>
-            <div class="arch-connect"></div>
-            <div class="arch-node be"><div class="t">⚙️ Backend</div><div class="d">NestJS · JWT · OTP · business logic</div><span class="tag">core</span></div>
-            <div class="arch-connect"></div>
-            <div class="arch-node"><div class="t">🧠 Face Service</div><div class="d">FastAPI + InsightFace → embedding</div><span class="tag">API key</span></div>
-            <div class="arch-connect"></div>
-            <div class="arch-node"><div class="t">🗄️ Database</div><div class="d">MySQL · schema · migrations</div><span class="tag">MySQL</span></div>
-            <div class="arch-connect"></div>
-            <div class="arch-node"><div class="t">📡 Tracking Agents</div><div class="d">Windows agent · browser extension</div><span class="tag">heartbeat</span></div>
-          </div>
+        <div class="stack-col">
+          <div class="sub">Analysis</div>
+          <h4>Reading the traffic</h4>
+          <ul>
+            <li>Intercept &amp; replay <span>Burp Suite</span></li>
+            <li>Recon <span>service / port</span></li>
+            <li>Content discovery <span>Gobuster</span></li>
+            <li>Reporting <span>findings → fixes</span></li>
+          </ul>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERT -->
-  <section id="cert">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">// latest achievement</span>
-        <h2>Certification</h2>
-      </div>
-      <div class="grid grid-2">
-        <div class="card reveal" style="display:flex;gap:22px;align-items:center;">
-          <img src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/Coursera.jpg" alt="Coursera Certificate" style="width:150px;height:110px;object-fit:cover;border-radius:12px;border:1px solid var(--border);" />
-          <div>
-            <span class="chip accent">Coursera</span>
-            <h3 style="margin:10px 0 6px;">ChatGPT and AI Chatbots</h3>
-            <p>Completed a comprehensive course on developing and implementing AI chatbots, focusing on ChatGPT and conversational AI.</p>
-          </div>
-        </div>
-        <div class="card reveal d1" style="display:flex;gap:22px;align-items:center;">
-          <img src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/Tryhackme.png" alt="TryHackMe" style="width:150px;height:110px;object-fit:cover;border-radius:12px;border:1px solid var(--border);" />
-          <div>
-            <span class="chip accent">TryHackMe</span>
-            <h3 style="margin:10px 0 6px;">Hands-on Security Labs</h3>
-            <p>Recon, exploitation, and web attacks practiced across live labs — Nmap, Metasploit, DVWA, SQLi &amp; XSS.</p>
-          </div>
+        <div class="stack-col">
+          <div class="sub">Build</div>
+          <h4>Shipping it secure</h4>
+          <ul>
+            <li>Frontend <span>React · Vite</span></li>
+            <li>Backend <span>NestJS · FastAPI</span></li>
+            <li>Data <span>MySQL</span></li>
+            <li>Auth <span>JWT · OTP</span></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -181,9 +192,14 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <a href="index.html" class="brand"><span class="prompt">fight@sec</span>:~$</a>
-      <p>© 2025 Panyapipat Khamkhaw · Built with ☕ &amp; curiosity</p>
+    <div class="wrap footer-inner">
+      <a href="index.html" class="wordmark"><b>P.</b> Khamkhaw</a>
+      <p>© 2026 Panyapipat Khamkhaw — Chiang Mai, TH</p>
+      <div class="links">
+        <a href="contact.html">Email</a>
+        <a href="project.html">Work</a>
+        <a href="#top">Top ↑</a>
+      </div>
     </div>
   </footer>
 
