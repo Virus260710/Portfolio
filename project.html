@@ -3,208 +3,177 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects — Panyapipat Khamkhaw</title>
-  <meta name="description" content="Selected projects: Kinof room-booking platform, movie ticket booking app, calorie tracker, Arduino internship, and TryHackMe labs." />
+  <title>Work — Panyapipat Khamkhaw</title>
+  <meta name="description" content="Selected projects by Panyapipat Khamkhaw — Kinof, movie booking, calorie tracker, Arduino internship, and security labs." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar" id="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="brand"><span class="prompt">fight@sec</span>:~$<span class="caret"></span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">≡</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">./home</a></li>
-        <li><a href="about.html">./about</a></li>
-        <li><a href="project.html" class="active">./projects</a></li>
-        <li><a href="contact.html">./contact</a></li>
-      </ul>
+  <header class="topbar" id="top">
+    <div class="topbar-inner">
+      <a href="index.html" class="wordmark"><b>P.</b> Khamkhaw</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">menu</button>
+      <nav class="nav" id="nav">
+        <a href="index.html">Index</a>
+        <a href="project.html" class="active">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <main>
-    <section style="padding-top:140px;padding-bottom:40px;">
-      <div class="container">
-        <div class="section-head reveal" style="margin-bottom:0;">
-          <span class="eyebrow">// portfolio</span>
-          <h2>Things I've <span class="gradient-text">built &amp; broken</span></h2>
-          <p>A mix of full-stack engineering, UX design, and offensive-security practice.</p>
-        </div>
+  <section style="padding-top:clamp(90px,14vh,150px);">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">—</span>
+        <h2>Things I've built<br />&amp; taken apart</h2>
+        <span class="note">2024 — 2026</span>
       </div>
-    </section>
 
-    <section style="padding-top:20px;">
-      <div class="container">
-
-        <!-- KINOF (flagship) -->
-        <article class="project-block reveal" id="kinof">
-          <div class="pb-head">
-            <div class="pb-top">
-              <h3>Kinof — Computer Room Booking &amp; Management</h3>
-              <span class="pb-num">// flagship</span>
-            </div>
-            <p class="pb-desc">
-              A full-stack platform for booking and managing computer rooms, built as a
-              multi-service system with a strict security boundary. Students reserve machines and
-              check in with face recognition; admins monitor every machine in real time. Clients
-              never talk to the database or face engine directly — the backend is the single source
-              of truth for auth, bookings, and agent commands.
-            </p>
-            <div class="pb-stack">
-              <span class="chip accent">React</span><span class="chip accent">Vite</span><span class="chip accent">Tailwind</span>
-              <span class="chip">NestJS</span><span class="chip">FastAPI</span><span class="chip">InsightFace</span>
-              <span class="chip">MySQL</span><span class="chip">JWT</span><span class="chip">Browser Extension</span>
+      <div class="work">
+        <!-- KINOF -->
+        <article class="project reveal" id="kinof">
+          <div class="p-body">
+            <span class="p-num">01 — Flagship</span>
+            <h3>Kinof</h3>
+            <div class="p-kicker">Computer-room booking &amp; management system</div>
+            <p>An end-to-end platform for booking and managing lab machines. It's a multi-service system built around one rule: the client is never trusted. Every request to the database or the face engine is brokered by the backend.</p>
+            <ul class="p-points">
+              <li><b>Face-recognition check-in</b> — FastAPI + InsightFace, storing only 512-dimension embeddings, never raw face images.</li>
+              <li><b>OTP booking flow</b> — single-use, expiring tokens held as HMAC hashes server-side.</li>
+              <li><b>JWT auth &amp; roles</b> across user, admin, and kiosk interfaces.</li>
+              <li><b>Windows tracking agents</b> reporting machine status and running programs, each with its own hashed API key.</li>
+              <li><b>Browser extension</b> for domain-level tracking — logs domains only, no paths or content.</li>
+            </ul>
+            <div class="p-stack">
+              <span>React</span><span>Vite</span><span>Tailwind</span><span>NestJS</span><span>FastAPI</span><span>InsightFace</span><span>MySQL</span>
             </div>
           </div>
-          <div class="pb-body">
-            <div class="grid grid-2" style="gap:28px;align-items:start;">
-              <div class="arch" style="border:1px solid var(--border);border-radius:16px;padding:28px;">
-                <div class="arch-stack">
-                  <div class="arch-node"><div class="t">🖥️ Frontend</div><div class="d">User · Admin · Kiosk (React + Vite + Tailwind)</div><span class="tag">HTTP</span></div>
-                  <div class="arch-connect"></div>
-                  <div class="arch-node be"><div class="t">⚙️ Backend</div><div class="d">NestJS · JWT · OTP booking · central API</div><span class="tag">core</span></div>
-                  <div class="arch-connect"></div>
-                  <div class="arch-node"><div class="t">🧠 Face Service</div><div class="d">FastAPI + InsightFace → 512-d embedding</div><span class="tag">API key</span></div>
-                  <div class="arch-connect"></div>
-                  <div class="arch-node"><div class="t">🗄️ Database</div><div class="d">MySQL · schema · migrations · seed</div><span class="tag">MySQL</span></div>
-                  <div class="arch-connect"></div>
-                  <div class="arch-node"><div class="t">📡 Tracking Agents</div><div class="d">Windows agent · browser extension</div><span class="tag">heartbeat</span></div>
-                </div>
+          <div class="p-media">
+            <div class="frame" data-slider>
+              <div class="slider">
+                <img class="slide active" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/loginpage.png" alt="Kinof login page" />
+                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/registerpage.png" alt="Kinof register page" />
+                <button class="ctrl prev" aria-label="Previous">‹</button>
+                <button class="ctrl next" aria-label="Next">›</button>
               </div>
-              <div>
-                <h4 style="font-family:var(--display);font-size:1.1rem;margin-bottom:6px;">Key engineering decisions</h4>
-                <ul class="feature-list">
-                  <li><b>Privacy-first face check-in</b> — the face service only validates image quality and returns a 512-value embedding; raw photos are never stored.</li>
-                  <li><b>Single-use OTP bookings</b> — tokens expire and are stored only as HMAC hashes on the backend.</li>
-                  <li><b>Hard trust boundary</b> — Browser &amp; Kiosk can't reach MySQL or the face service directly; the face service accepts the backend only, via a shared API key.</li>
-                  <li><b>Per-machine agents</b> — each Windows agent carries its own API key (backend keeps only the hash) and sends heartbeats, program status, and executes admin commands.</li>
-                  <li><b>Scoped browser extension</b> — reports and blocks by domain only; no paths, queries, content, or passwords.</li>
-                  <li><b>Migration-driven DB</b> — base schema plus migrations for tracking, face, admin, entry OTP, and auth tokens.</li>
-                </ul>
-              </div>
+              <div class="dots"></div>
             </div>
+            <div class="p-cap">Auth &amp; booking interface</div>
           </div>
         </article>
 
-        <!-- MOVIE TICKET BOOKING -->
-        <article class="project-block reveal" id="movie">
-          <div class="pb-head">
-            <div class="pb-top">
-              <h3>Movie Ticket Booking Application</h3>
-              <span class="pb-num">// ui/ux</span>
-            </div>
-            <p class="pb-desc">An easy-to-use app for booking movie tickets. Users browse films, then select cinema, showtime, and seats in real time — designed end-to-end in Figma.</p>
-            <div class="pb-stack"><span class="chip accent">Figma</span><span class="chip">UI/UX</span><span class="chip">Prototype</span><span class="chip">Interaction Design</span></div>
-          </div>
-          <div class="pb-body">
-            <div class="slider" data-slider>
-              <div class="track">
-                <img class="slide active" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/loginpage.png" alt="Login page" />
-                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/registerpage.png" alt="Register page" />
-                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/mainpagemovie.png" alt="Main movie page" />
+        <!-- MOVIE -->
+        <article class="project flip reveal" id="movie">
+          <div class="p-media">
+            <div class="frame" data-slider>
+              <div class="slider">
+                <img class="slide active" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/mainpagemovie.png" alt="Movie booking home" />
                 <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/choice.png" alt="Movie choice" />
                 <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/pick.png" alt="Seat pick" />
+                <button class="ctrl prev" aria-label="Previous">‹</button>
+                <button class="ctrl next" aria-label="Next">›</button>
               </div>
-              <button class="nav prev" aria-label="Previous">‹</button>
-              <button class="nav next" aria-label="Next">›</button>
               <div class="dots"></div>
             </div>
-            <div style="text-align:center;margin-top:22px;">
-              <a href="https://www.figma.com/proto/MR9kEqSn4ocfDHXzFn8zCH/Project?node-id=1-62&starting-point-node-id=1%3A62" target="_blank" rel="noopener" class="btn btn-ghost">Open Figma prototype ↗</a>
-            </div>
+            <div class="p-cap">Browse → choose → seat map</div>
+          </div>
+          <div class="p-body">
+            <span class="p-num">02</span>
+            <h3>Movie Ticket Booking</h3>
+            <div class="p-kicker">Full-stack web application</div>
+            <p>Users browse showings, pick seats from a live seat map, and check out. Seat state is held server-side so the same seat can't be sold twice, and the map reflects what's already taken.</p>
+            <div class="p-stack"><span>Web app</span><span>Seat map</span><span>Server-side state</span><span>Checkout</span></div>
           </div>
         </article>
 
         <!-- CALORIE -->
-        <article class="project-block reveal" id="calorie">
-          <div class="pb-head">
-            <div class="pb-top">
-              <h3>Calorie &amp; Fitness Tracker</h3>
-              <span class="pb-num">// health app</span>
-            </div>
-            <p class="pb-desc">A fitness tracking application that helps users monitor their daily calorie intake and stay on top of their health goals — designed and prototyped in Figma.</p>
-            <div class="pb-stack"><span class="chip accent">Figma</span><span class="chip">UI/UX</span><span class="chip">Mobile</span><span class="chip">Health &amp; Fitness</span></div>
+        <article class="project reveal" id="calorie">
+          <div class="p-body">
+            <span class="p-num">03</span>
+            <h3>Calorie &amp; Fitness Tracker</h3>
+            <div class="p-kicker">Daily logging &amp; targets</div>
+            <p>Log meals and workouts against a daily calorie target. The interface puts the day's running total first and keeps the log readable even when it's long — most tracking apps lose that once you've logged ten things.</p>
+            <div class="p-stack"><span>Tracking</span><span>Daily goals</span><span>Progress view</span></div>
           </div>
-          <div class="pb-body">
-            <div class="slider" data-slider>
-              <div class="track">
-                <img class="slide active" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie1.png" alt="Calorie app 1" />
-                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie2.png" alt="Calorie app 2" />
-                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie3.png" alt="Calorie app 3" />
-                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie4.png" alt="Calorie app 4" />
-                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie5.png" alt="Calorie app 5" />
-                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie6.png" alt="Calorie app 6" />
-                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie7.png" alt="Calorie app 7" />
+          <div class="p-media">
+            <div class="frame" data-slider>
+              <div class="slider">
+                <img class="slide active" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie1.png" alt="Calorie 1" />
+                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie2.png" alt="Calorie 2" />
+                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie3.png" alt="Calorie 3" />
+                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie4.png" alt="Calorie 4" />
+                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie5.png" alt="Calorie 5" />
+                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie6.png" alt="Calorie 6" />
+                <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/calorie7.png" alt="Calorie 7" />
+                <button class="ctrl prev" aria-label="Previous">‹</button>
+                <button class="ctrl next" aria-label="Next">›</button>
               </div>
-              <button class="nav prev" aria-label="Previous">‹</button>
-              <button class="nav next" aria-label="Next">›</button>
               <div class="dots"></div>
             </div>
-            <div style="text-align:center;margin-top:22px;">
-              <a href="https://www.figma.com/proto/GyAxXAVv4azXAbQ7jhzDgo/Untitled?node-id=22-8&starting-point-node-id=22%3A8" target="_blank" rel="noopener" class="btn btn-ghost">Open Figma prototype ↗</a>
-            </div>
+            <div class="p-cap">Logging &amp; daily summary</div>
           </div>
         </article>
 
         <!-- INTERNSHIP -->
-        <article class="project-block reveal" id="internship">
-          <div class="pb-head">
-            <div class="pb-top">
-              <h3>Internship — Arduino Programming</h3>
-              <span class="pb-num">// experience</span>
-            </div>
-            <p class="pb-desc">Hands-on internship programming Arduino boards — building and debugging embedded logic for learning and experimentation, bridging hardware and software.</p>
-            <div class="pb-stack"><span class="chip accent">Arduino</span><span class="chip">C/C++</span><span class="chip">Embedded</span><span class="chip">Electronics</span></div>
-          </div>
-          <div class="pb-body">
-            <div class="slider" data-slider style="max-width:620px;">
-              <div class="track" style="aspect-ratio:4/3;">
+        <article class="project flip reveal" id="internship">
+          <div class="p-media">
+            <div class="frame" data-slider>
+              <div class="slider">
                 <img class="slide active" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%991.jpg" alt="Internship 1" />
                 <img class="slide" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%992.jpg" alt="Internship 2" />
+                <button class="ctrl prev" aria-label="Previous">‹</button>
+                <button class="ctrl next" aria-label="Next">›</button>
               </div>
-              <button class="nav prev" aria-label="Previous">‹</button>
-              <button class="nav next" aria-label="Next">›</button>
               <div class="dots"></div>
             </div>
+            <div class="p-cap">On-site, hardware</div>
+          </div>
+          <div class="p-body">
+            <span class="p-num">04</span>
+            <h3>Arduino Programming</h3>
+            <div class="p-kicker">Internship</div>
+            <p>Hands-on embedded work: wiring sensors and actuators to an Arduino and writing the firmware to drive them. Different constraints from web work — no room to be sloppy with timing or memory.</p>
+            <div class="p-stack"><span>Arduino</span><span>C/C++</span><span>Sensors</span><span>Embedded</span></div>
           </div>
         </article>
 
-        <!-- TRYHACKME -->
-        <article class="project-block reveal" id="tryhackme">
-          <div class="pb-head">
-            <div class="pb-top">
-              <h3>TryHackMe Labs</h3>
-              <span class="pb-num">// offensive security</span>
-            </div>
-            <p class="pb-desc">Practical, hands-on offensive-security labs — from reconnaissance to full exploitation of vulnerable targets.</p>
-            <div class="pb-stack"><span class="chip accent">Nmap</span><span class="chip">Metasploit</span><span class="chip">Burp Suite</span><span class="chip">DVWA</span><span class="chip">Gobuster</span></div>
+        <!-- LABS -->
+        <article class="project reveal" id="labs">
+          <div class="p-body">
+            <span class="p-num">05</span>
+            <h3>Security Labs</h3>
+            <div class="p-kicker">TryHackMe · DVWA</div>
+            <p>Ongoing practice across recon, exploitation, and web attacks. Where I keep the offensive side sharp — most of what ends up protecting the things I build starts as something I learned to break here.</p>
+            <ul class="p-points">
+              <li><b>Recon</b> — Nmap service and port enumeration, Gobuster content discovery.</li>
+              <li><b>Web</b> — SQL injection and XSS against DVWA.</li>
+              <li><b>Exploitation</b> — Metasploit across guided and open rooms.</li>
+            </ul>
+            <div class="p-stack"><span>Nmap</span><span>Gobuster</span><span>Metasploit</span><span>Burp Suite</span><span>DVWA</span></div>
           </div>
-          <div class="pb-body">
-            <div class="grid grid-2" style="gap:28px;align-items:center;">
-              <img src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/Tryhackme.png" alt="TryHackMe" style="border-radius:14px;border:1px solid var(--border);width:100%;" />
-              <div class="lab-term">
-                <div class="bar"><span class="dot" style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></span><span class="dot" style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></span><span class="dot" style="width:10px;height:10px;border-radius:50%;background:#28c840;"></span>&nbsp; root@thm:~#</div>
-                <div class="body">
-                  <div class="l">Scanned for vulnerabilities using <b>Nmap</b>, <b>Gobuster</b> &amp; <b>Burp Suite</b></div>
-                  <div class="l">Analyzed web vulnerabilities with <b>DVWA</b></div>
-                  <div class="l">Practiced system exploitation &amp; post-exploitation</div>
-                  <div class="l">Used <b>Metasploit</b> to exploit Windows systems</div>
-                  <div class="l">Attacked web apps using <b>SQLi</b>, <b>XSS</b> &amp; Command Injection</div>
-                </div>
-              </div>
+          <div class="p-media">
+            <div class="frame">
+              <img class="still" src="%E0%B8%A3%E0%B8%B9%E0%B8%9B/Tryhackme.png" alt="TryHackMe" />
             </div>
+            <div class="p-cap">TryHackMe progress</div>
           </div>
         </article>
-
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <a href="index.html" class="brand"><span class="prompt">fight@sec</span>:~$</a>
-      <p>© 2025 Panyapipat Khamkhaw · Built with ☕ &amp; curiosity</p>
+    <div class="wrap footer-inner">
+      <a href="index.html" class="wordmark"><b>P.</b> Khamkhaw</a>
+      <p>© 2026 Panyapipat Khamkhaw — Chiang Mai, TH</p>
+      <div class="links">
+        <a href="contact.html">Email</a>
+        <a href="about.html">About</a>
+        <a href="#top">Top ↑</a>
+      </div>
     </div>
   </footer>
 
