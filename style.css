@@ -1,5 +1,5 @@
 /* =====================================================================
-   Panyapipat Khamkhaw — Portfolio
+   Panyapipat Khamkhaw · Portfolio
    Editorial / print-inspired theme. Paper ground, charcoal ink,
    single terracotta accent. Serif display + clean sans + mono labels.
    ===================================================================== */
@@ -15,9 +15,9 @@
   --accent:     #B8472A;   /* brick / terracotta */
   --accent-ink: #933519;
 
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --serif: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --sans:  "Inter", system-ui, -apple-system, sans-serif;
-  --mono:  "Space Mono", "JetBrains Mono", ui-monospace, monospace;
+  --mono:  "Inter", system-ui, -apple-system, sans-serif;
 
   --maxw: 1180px;
   --gutter: clamp(20px, 5vw, 64px);
@@ -59,7 +59,7 @@ img { display: block; max-width: 100%; }
 .tag-ink { color: var(--ink-faint); }
 
 /* Display headings */
-h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.04; letter-spacing: -0.01em; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.04; letter-spacing: -0.01em; }
 
 /* ---------- Top bar ---------- */
 .topbar {
@@ -185,7 +185,7 @@ section { padding: clamp(60px, 10vh, 110px) 0; }
 /* feature list for flagship */
 .p-points { list-style: none; margin-top: 18px; display: grid; gap: 11px; }
 .p-points li { position: relative; padding-left: 20px; color: var(--ink-soft); font-size: 15.5px; }
-.p-points li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+.p-points li::before { content: "·"; position: absolute; left: 0; color: var(--accent); }
 .p-points b { color: var(--ink); font-weight: 600; }
 
 /* ---------- Media / slider ---------- */
